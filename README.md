@@ -35,7 +35,7 @@ pip install minio
 - digits_recognize.ipynb is a classic ai hello world example training a model to classify images showing digits.
 - digits_generate.ipynb is a slightly more involved example that leverages a generative adverserial network model to generate new images showing digits.
 
-### notebooks/pipelines
+### pipelines
 set correct minio ip in each dsl.component before executing pipeline
 ```bash
 kubectl get -n kubeflow svc/minio-service # get cluster-ip and set accordingly in notebook
