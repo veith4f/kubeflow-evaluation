@@ -1,7 +1,10 @@
-# kubeflow-evaluation
+# Kubeflow Evaluation
 this is an evaluation of various ai techniques geared around kubeflow and tensorflow. creates a digit recognizer model working on images. tested to work on kubeflow v1.9.1.
 
-## deploying kubeflow
+## Preview
+![P](assets/preview.png)
+
+## Deploying Kubeflow
 step 1
 ```bash
 git clone git@github.com:kubeflow/manifests.git kubeflow-manifests
@@ -22,7 +25,7 @@ kubectl port-forward svc/istio-ingressgateway -n istio-system 8080:80
 ```
 then open the dashboard on http://localhost:8000 and log in as user@example.com/12341234
 
-## notebooks 
+## Notebooks 
 - create a new notebook and be sure to add `configuration->Allow access to kubeflow pipelines`.
 - wait for the notebook to become available, then connect.
 - open console in notebook, then
@@ -31,11 +34,11 @@ pip install minio
 ```
 - drag/drop the .ipynb files from notebooks folder into the files section on left side of jupyter instance.
 
-### exploration
+### Exploration
 - digits_recognize.ipynb is a classic ai hello world example training a model to classify images showing digits.
 - digits_generate.ipynb is a slightly more involved example that leverages a generative adverserial network model to generate new images showing digits.
 
-### pipelines
+### Pipelines
 set correct minio ip in each dsl.component before executing pipeline
 ```bash
 kubectl get -n kubeflow svc/minio-service # get cluster-ip and set accordingly in notebook
@@ -43,7 +46,7 @@ kubectl get -n kubeflow svc/minio-service # get cluster-ip and set accordingly i
 - digits_recognize_pipeline.ipynb creates an experiment and runs pipelines as part of that experiment.
 - you can also compile the pipeline into a yaml in Pipeline Intermediate Representation (IR) which can be executed on Google Cloud.
 
-## use prediction model served with kserve
+## Model serving
 - when the pipeline runs it will serve a model with kserve from namespace kubeflow-user-example-com
 - forward this model to localhost:8000
 ```bash
