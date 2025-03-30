@@ -1,5 +1,5 @@
-# digits-recognizer
-this is an evaluation of kubeflow. creates a digit recognizer model working on images. tested to work on kubeflow v1.9.1 with mnist.npz.
+# kubeflow-evaluation
+this is an evaluation of various ai techniques geared around kubeflow and tensorflow. creates a digit recognizer model working on images. tested to work on kubeflow v1.9.1.
 
 ## deploying kubeflow
 step 1
