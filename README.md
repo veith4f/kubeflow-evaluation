@@ -14,8 +14,8 @@ while ! kustomize build example | kubectl apply --server-side --force-conflicts 
 ```
 step 2
 ```bash
-git clone git@github.com:veith4f/digits-recognizer.git
-cd digits-recognizer
+git clone git@github.com:veith4f/kubeflow-evaluation.git
+cd kubeflow-evaluation
 kubectl create ns kubeflow-user-example-com # namespace of default user
 kubectl apply -f configs/mysql-peer-auth.yml # mysql database must not do mtls
 kubectl apply -f configs/global-allow-all.yml # make the istio-system/global-deny-all a global allow-all
