@@ -1,5 +1,5 @@
 # Kubeflow Evaluation
-this is an evaluation of various ai techniques geared around kubeflow and tensorflow. creates a digit recognizer model working on images. tested to work on kubeflow v1.9.1.
+This is an evaluation of various ai techniques geared around kubeflow and tensorflow. Creates digit recognizer and generator models. Tested to work on kubeflow v1.9.1.
 
 ## Preview
 ![P](assets/preview.png)
@@ -26,7 +26,7 @@ kubectl port-forward svc/istio-ingressgateway -n istio-system 8080:80
 then open the dashboard on http://localhost:8000 and log in as user@example.com/12341234
 
 ## Notebooks 
-- create a new notebook and be sure to add `configuration->Allow access to kubeflow pipelines`.
+- create a new notebook on full tensorflow image and be sure to add `configuration->Allow access to kubeflow pipelines`.
 - wait for the notebook to become available, then connect.
 - open console in notebook, then
 ```
